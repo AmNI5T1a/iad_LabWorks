@@ -1,0 +1,11 @@
+C:\Users\AmNI5TIa\Desktop\iad_labs\lab1\MainMenu\bin\Debug\netcoreapp2.1\MainMenu.deps.json
+C:\Users\AmNI5TIa\Desktop\iad_labs\lab1\MainMenu\bin\Debug\netcoreapp2.1\MainMenu.runtimeconfig.json
+C:\Users\AmNI5TIa\Desktop\iad_labs\lab1\MainMenu\bin\Debug\netcoreapp2.1\MainMenu.runtimeconfig.dev.json
+C:\Users\AmNI5TIa\Desktop\iad_labs\lab1\MainMenu\bin\Debug\netcoreapp2.1\MainMenu.dll
+C:\Users\AmNI5TIa\Desktop\iad_labs\lab1\MainMenu\bin\Debug\netcoreapp2.1\MainMenu.pdb
+C:\Users\AmNI5TIa\Desktop\iad_labs\lab1\MainMenu\obj\Debug\netcoreapp2.1\MainMenu.csprojAssemblyReference.cache
+C:\Users\AmNI5TIa\Desktop\iad_labs\lab1\MainMenu\obj\Debug\netcoreapp2.1\MainMenu.csproj.CoreCompileInputs.cache
+C:\Users\AmNI5TIa\Desktop\iad_labs\lab1\MainMenu\obj\Debug\netcoreapp2.1\MainMenu.AssemblyInfoInputs.cache
+C:\Users\AmNI5TIa\Desktop\iad_labs\lab1\MainMenu\obj\Debug\netcoreapp2.1\MainMenu.AssemblyInfo.cs
+C:\Users\AmNI5TIa\Desktop\iad_labs\lab1\MainMenu\obj\Debug\netcoreapp2.1\MainMenu.dll
+C:\Users\AmNI5TIa\Desktop\iad_labs\lab1\MainMenu\obj\Debug\netcoreapp2.1\MainMenu.pdb
