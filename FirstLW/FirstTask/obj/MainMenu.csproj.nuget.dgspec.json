@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AmNI5TIa\\Desktop\\iad_labs\\lab1\\MainMenu\\MainMenu.csproj": {}
+    "C:\\Users\\AmNI5TIa\\Desktop\\iad_labs\\iad_LabWorks\\FirstLW\\FirstTask\\MainMenu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AmNI5TIa\\Desktop\\iad_labs\\lab1\\MainMenu\\MainMenu.csproj": {
+    "C:\\Users\\AmNI5TIa\\Desktop\\iad_labs\\iad_LabWorks\\FirstLW\\FirstTask\\MainMenu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AmNI5TIa\\Desktop\\iad_labs\\lab1\\MainMenu\\MainMenu.csproj",
+        "projectUniqueName": "C:\\Users\\AmNI5TIa\\Desktop\\iad_labs\\iad_LabWorks\\FirstLW\\FirstTask\\MainMenu.csproj",
         "projectName": "MainMenu",
-        "projectPath": "C:\\Users\\AmNI5TIa\\Desktop\\iad_labs\\lab1\\MainMenu\\MainMenu.csproj",
+        "projectPath": "C:\\Users\\AmNI5TIa\\Desktop\\iad_labs\\iad_LabWorks\\FirstLW\\FirstTask\\MainMenu.csproj",
         "packagesPath": "C:\\Users\\AmNI5TIa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AmNI5TIa\\Desktop\\iad_labs\\lab1\\MainMenu\\obj\\",
+        "outputPath": "C:\\Users\\AmNI5TIa\\Desktop\\iad_labs\\iad_LabWorks\\FirstLW\\FirstTask\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

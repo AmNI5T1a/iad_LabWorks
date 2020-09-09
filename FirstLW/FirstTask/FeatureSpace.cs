@@ -5,7 +5,7 @@ namespace IAD
 {
     public class FeatureSpace
     {
-
+        double[,] Display = new double[1920, 1080];
         public struct Point
         {
             private double xAxis;
@@ -16,23 +16,33 @@ namespace IAD
                 this.xAxis = x;
                 this.yAxis = y;
             }
-            public void DisplayComponents(){
+            public void DisplayComponents()
+            {
                 Console.WriteLine($"x: {xAxis} y:{yAxis}");
             }
-
         }
 
-        public Point TakePointFromInput(Point tempPoint , double xAxis , double yAxis)
+        public Point TakePointFromInput(Point tempPoint, double xAxis, double yAxis)
         {
             tempPoint.PasteComponents(xAxis, yAxis);
             return tempPoint;
         }
 
-        public void DisplayPointOnScreen()
+        public void CreateDisplay()
         {
-            Point testpoint = new Point();
-            testpoint = TakePointFromInput(testpoint, 322, 228);
-            testpoint.DisplayComponents();
+            double counter = 0;
+
+            for (int i = 0; i < 1920; i++)
+                for (int j = 0; j < 1080; j++)
+                {
+                    Display[i, j] = counter;
+                    counter++;
+                }
+        }
+        /*<summary>Calculate distance between 2 points on screen using Euclidean algorithm</summary>*/
+        public void CalculateDistance(Point tempFirstPoint , Point tempSecondPoint)
+        {
+            Console.Write($"Distance: ");
         }
     }
 }

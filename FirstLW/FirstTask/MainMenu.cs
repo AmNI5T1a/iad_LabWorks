@@ -16,9 +16,19 @@ namespace IAD
 
 
             //<summary>------THIS IS TEST BLOCK------------- </summary>
-            Console.WriteLine("starting...");
+
+
+            //intialize 2 points
+            //create 2 lists
+            //start distanceBetweenPoints func
+            #region Intializate Components
+            FeatureSpace.Point firstPoint = new FeatureSpace.Point();
+            FeatureSpace.Point secondPoint = new FeatureSpace.Point();
             FeatureSpace FS = new FeatureSpace();
-            FS.DisplayPointOnScreen();
+            #endregion
+            
+            //FS.TakePointFromInput(firstPoint,);
+
         }
     }
 }
