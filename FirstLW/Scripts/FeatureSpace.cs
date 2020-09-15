@@ -28,15 +28,15 @@ namespace IAD
             return tempPoint;
         }
 
-        /*<summary>
-        Points{i , j}
+        /// <summary>
+        /// Points{i , j}
 
-        firstList [i,i+1,i+2,i+3...i+n]
-        secondList [i,i+1,i+2,i+3...i+n]
+        /// firstList [i,i+1,i+2,i+3...i+n]
+        /// secondList [i,i+1,i+2,i+3...i+n]
 
-        Sqrt((firstlist[i]-secondList[i])^2+(firstList[j]-secondList[j])^2) -> ToConsole
+        /// Sqrt((firstlist[i]-secondList[i])^2+(firstList[j]-secondList[j])^2) -> ToConsole
         
-        </summary>*/
+        /// </summary>
         public void CalculateDistance(Int16 other, Point tempFirstPoint)
         {
             List<double> firstList = new List<double>();
