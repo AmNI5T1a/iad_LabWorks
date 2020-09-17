@@ -38,8 +38,9 @@ namespace IAD
                     break;
                 case (2):
                     Console.Clear();
-                    MethodOfNearestNeigbor KNN = new MethodOfNearestNeigbor();
-                    KNN.CreateVector2Space(20);
+                    MethodOfNearestNeigbor kNN = new MethodOfNearestNeigbor();
+                    kNN.MainMethod();
+                    Console.WriteLine("Ready!");
                     Console.ReadKey();
                     break;
                 case (3):
