@@ -29,7 +29,7 @@ namespace IAD
             Random rndGeneration = new Random();
             for (int i = 0; i < pointsInSpace; i++)
             {
-                space.Add(new Vector2(rndGeneration.Next(0, 100), rndGeneration.Next(0, 100)));
+                space.Add(new Vector2(rndGeneration.Next(-1000, 1000), rndGeneration.Next(-1000, 1000)));
             }
 
             /// <summary>
@@ -41,11 +41,9 @@ namespace IAD
             }
 
 
-
             ShowVector2Space(pointsInSpace, space);
             Console.Write("Choose point from your space: ");
             short yourPoint = Convert.ToInt16(Console.ReadLine());
-            Console.WriteLine($"Your point is: {space[yourPoint]}");
 
             /// <summary>
             /// Adding your point to black list to avoid him
@@ -53,28 +51,7 @@ namespace IAD
             List<Vector2> blackList = new List<Vector2>();
             blackList.Add(space[yourPoint]);
 
-            Vector2 tempPoint = new Vector2();
-            tempPoint = listOfNeighbors[0];
 
-            // for (short j = 0; j < numberOfNeighbor;j++)
-            // {
-            //     for (short n = 0; n < pointsInSpace;n++)
-            //     {
-            //         if (EuclidDistance(space[yourPoint], space[n]) < EuclidDistance(space[yourPoint], listOfNeighbors[j]) && space[n] !=space[yourPoint])
-            //         {
-            //             if(EuclidDistance(space[yourPoint], space[n]) < EuclidDistance(space[yourPoint], tempPoint)){
-            //                 tempPoint = space[n];
-            //                 Console.WriteLine("i was here");
-            //             }
-
-            //         }
-            //     }
-            //     listOfNeighbors[j] = tempPoint;
-            //     //blackList.Add(tempPoint);
-            //     space.Remove(tempPoint);
-            //     pointsInSpace-=1;
-            // }
-            #region TestBlock
             /// <summary>
             /// Here we will find our nearest point in space
             /// </summary>
@@ -89,14 +66,9 @@ namespace IAD
                     blackList.Add(listOfNeighbors[j]);
                 }
             }
-            Console.WriteLine("Black list: ");
-            for (int i = 0; i < numberOfNeighbor; i++)
-            {
-                Console.WriteLine(listOfNeighbors[i]);
-            }
-            #endregion
             Console.WriteLine("Your nearest neighbors: ");
             ShowVector2Space(numberOfNeighbor, listOfNeighbors);
+            Console.WriteLine($"Your point: {space[yourPoint]}");
         }
 
 
@@ -105,7 +77,7 @@ namespace IAD
         /// pointsInspace - how many points do u have in your space
         /// vector2s - your space
         /// </summary>
-        public void ShowVector2Space(in short pointsInSpace, List<Vector2> vector2s)
+        public void ShowVector2Space(in short pointsInSpace, in List<Vector2> vector2s)
         {
             for (int other = 0; other < pointsInSpace; other++)
                 Console.WriteLine($"{other.ToString()}: {vector2s[other]}");
