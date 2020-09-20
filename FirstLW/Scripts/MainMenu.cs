@@ -37,14 +37,14 @@ namespace IAD
                     FS.CalculateDistance(listLength, Points);
                     break;
                 case (2):
+                    
+                    break;
+                case (3):
                     Console.Clear();
                     MethodOfNearestNeigbor kNN = new MethodOfNearestNeigbor();
                     kNN.MainMethod();
                     Console.WriteLine("Ready!");
                     Console.ReadKey();
-                    break;
-                case (3):
-                    Console.WriteLine("Work in progress...");
                     break;
             }
         }

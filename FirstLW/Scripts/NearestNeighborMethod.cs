@@ -29,16 +29,17 @@ namespace IAD
             Random rndGeneration = new Random();
             for (int i = 0; i < pointsInSpace; i++)
             {
-                space.Add(new Vector2(rndGeneration.Next(-1000, 1000), rndGeneration.Next(-1000, 1000)));
+                space.Add(new Vector2(rndGeneration.Next(0, 100), rndGeneration.Next(0, 100)));
             }
 
             /// <summary>
-            /// Filling space with random variables
+            /// Filling list of Neighbors with random point from space
             /// </summary>
             for (int i = 0; i < numberOfNeighbor; i++)
             {
                 listOfNeighbors.Add(space[i]);
             }
+
 
 
             ShowVector2Space(pointsInSpace, space);
@@ -47,19 +48,54 @@ namespace IAD
             Console.WriteLine($"Your point is: {space[yourPoint]}");
 
             /// <summary>
+            /// Adding your point to black list to avoid him
+            /// </summary>
+            List<Vector2> blackList = new List<Vector2>();
+            blackList.Add(space[yourPoint]);
+
+            Vector2 tempPoint = new Vector2();
+            tempPoint = listOfNeighbors[0];
+
+            // for (short j = 0; j < numberOfNeighbor;j++)
+            // {
+            //     for (short n = 0; n < pointsInSpace;n++)
+            //     {
+            //         if (EuclidDistance(space[yourPoint], space[n]) < EuclidDistance(space[yourPoint], listOfNeighbors[j]) && space[n] !=space[yourPoint])
+            //         {
+            //             if(EuclidDistance(space[yourPoint], space[n]) < EuclidDistance(space[yourPoint], tempPoint)){
+            //                 tempPoint = space[n];
+            //                 Console.WriteLine("i was here");
+            //             }
+
+            //         }
+            //     }
+            //     listOfNeighbors[j] = tempPoint;
+            //     //blackList.Add(tempPoint);
+            //     space.Remove(tempPoint);
+            //     pointsInSpace-=1;
+            // }
+            #region TestBlock
+            /// <summary>
             /// Here we will find our nearest point in space
             /// </summary>
-            for (int i = 0; i < pointsInSpace;)
+            for (short i = 0; i < pointsInSpace; i++)
             {
-                for (int j = 0; j < numberOfNeighbor; j++)
+                for (short j = 0; j < numberOfNeighbor; j++)
                 {
-                    if (EuclidDistance(space[yourPoint], space[i]) < EuclidDistance(space[yourPoint], listOfNeighbors[j]) || space[i] != space[yourPoint])
+                    if (EuclidDistance(space[yourPoint], space[i]) < EuclidDistance(space[yourPoint], listOfNeighbors[j]) && !blackList.Contains(space[i]))
                     {
                         listOfNeighbors[j] = space[i];
                     }
+                    blackList.Add(listOfNeighbors[j]);
                 }
-                i++;
             }
+            Console.WriteLine("Black list: ");
+            for (int i = 0; i < numberOfNeighbor; i++)
+            {
+                Console.WriteLine(listOfNeighbors[i]);
+            }
+            #endregion
+            Console.WriteLine("Your nearest neighbors: ");
             ShowVector2Space(numberOfNeighbor, listOfNeighbors);
         }
 
