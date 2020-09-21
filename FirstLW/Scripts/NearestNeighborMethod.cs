@@ -9,10 +9,11 @@ namespace IAD
     {
         /// <summary>
         /// After realising MainMethod - split it
-        /// </summary>        
-        public void MainMethod()
+        /// </summary>      
+        private SpaceFiller _filler = new SpaceFiller();  
+        public void Main()
         {
-            Console.WriteLine("Input number of  neighbors: ");
+            Console.WriteLine("Input  number of  neighbors: ");
             short numberOfNeighbor = Convert.ToInt16(Console.ReadLine());
 
             List<Vector2> listOfNeighbors = new List<Vector2>();
@@ -26,19 +27,12 @@ namespace IAD
             /// <summary>
             /// Filling space with random variables
             /// </summary>
-            Random rndGeneration = new Random();
-            for (int i = 0; i < pointsInSpace; i++)
-            {
-                space.Add(new Vector2(rndGeneration.Next(-1000, 1000), rndGeneration.Next(-1000, 1000)));
-            }
+            _filler.Fill(ref space, ref pointsInSpace , -1000, 1000);
 
             /// <summary>
             /// Filling list of Neighbors with random point from space
             /// </summary>
-            for (int i = 0; i < numberOfNeighbor; i++)
-            {
-                listOfNeighbors.Add(space[i]);
-            }
+            _filler.Fill(ref listOfNeighbors,ref numberOfNeighbor, ref space);
 
 
             ShowVector2Space(pointsInSpace, space);
@@ -82,10 +76,37 @@ namespace IAD
             for (int other = 0; other < pointsInSpace; other++)
                 Console.WriteLine($"{other.ToString()}: {vector2s[other]}");
         }
+
+
+        /// <summary>
+        /// Formule : √((x1-x2)^2+(y1-y2)^2)
+        /// Can be modified to change to Vector3,Vector4 and so on
+        /// </summary>
         virtual protected double EuclidDistance(Vector2 firstTemp, Vector2 secondTemp)
         {
             double result = Math.Sqrt(Math.Pow(firstTemp.X - secondTemp.X, 2) + Math.Pow(firstTemp.Y - secondTemp.Y, 2));
             return result;
+        }
+    }
+    class SpaceFiller
+    {
+        private Random rndGeneration = new Random();
+
+        /// <summary>
+        /// Method to fill list with random variables
+        /// </summary>
+        public void Fill(ref List<Vector2> list, ref short butting, short from, short to)
+        {
+            for (short i = 0; i < butting; i++)
+                list.Add(new Vector2(rndGeneration.Next(from,to),rndGeneration.Next(from,to)));
+        }
+        /// <summary>
+        /// Method to fill a list from another existing list
+        /// <summary>
+        public void Fill(ref List<Vector2> listToFill, ref short butting , ref List<Vector2> mainList)
+        {
+            for(short i=0;i< butting;i++)
+                listToFill.Add(mainList[i]);
         }
     }
 }

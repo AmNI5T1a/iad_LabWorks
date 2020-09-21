@@ -42,7 +42,7 @@ namespace IAD
                 case (3):
                     Console.Clear();
                     MethodOfNearestNeigbor kNN = new MethodOfNearestNeigbor();
-                    kNN.MainMethod();
+                    kNN.Main();
                     Console.WriteLine("Ready!");
                     Console.ReadKey();
                     break;
