@@ -12,3 +12,19 @@ First Laboratory work:
                2.Input second point
                3.Input space length(can't be less than this 2 point)
                
+               
+       Second task : 1.Work in progress..
+                    
+               
+       Third task : 1.Creating Vector2 space
+                    2.Paste random values inside this space from -1000 to 1000(u can change it: csharp(CS0103) [32,102])
+                    3.Using EuculidDistance mehtod findning closest point
+                    
+               
+               How to use my work for example:
+               1.Input number of neighbors u want to search
+               2.Input number of points u want to create in your space
+               3.Choose r point from space (from 0 to pointsInSpace)
+               
+               
+               
