@@ -5,28 +5,23 @@ namespace IAD
 {
     public class FeatureSpace
     {
+        SpaceFiller newFiller = new SpaceFiller();
         public struct Point
         {
-            public double xAxis;
-            public double yAxis;
+            private int xAxis;
+            private int yAxis;
 
-            public void PasteComponents(double x, double y)
+            public void PasteComponents(int x, int y)
             {
                 xAxis = x;
                 yAxis = y;
             }
             public void DisplayComponents()
             {
-                Console.WriteLine($"x: {xAxis} y:{yAxis}");
+                Console.WriteLine($"ur point is: x: {xAxis} y:{yAxis}");
             }
         }
-
-        public Point TakePointFromInput(double xAxis, double yAxis)
-        {
-            Point tempPoint = new Point();
-            tempPoint.PasteComponents(xAxis, yAxis);
-            return tempPoint;
-        }
+        
 
         /// <summary>
         /// Points{i , j}
@@ -35,26 +30,30 @@ namespace IAD
         /// secondList [i,i+1,i+2,i+3...i+n]
 
         /// Sqrt((firstlist[i]-secondList[i])^2+(firstList[j]-secondList[j])^2) -> ToConsole
-        
+
         /// </summary>
-        public void CalculateDistance(Int16 other, Point tempFirstPoint)
+
+        public void CreateSpace()
         {
-            List<double> firstList = new List<double>();
-            List<double> secondList = new List<double>();
-            Random rnd = new Random();
+            List<Point> space = new List<Point>();
 
-            for (int i = 0; i < other; i++)
-            {
-                firstList.Add(rnd.Next(0, 99999999));
-                secondList.Add(rnd.Next(0, 99999999));
-            }
-            Console.WriteLine("Your answer is: " + Math.Sqrt(Math.Pow((firstList[(int)tempFirstPoint.xAxis] - secondList[(int)tempFirstPoint.xAxis]), 2)
-                                                                + (Math.Pow((firstList[(int)tempFirstPoint.yAxis] - secondList[(int)tempFirstPoint.yAxis]), 2))));
-            Console.WriteLine("-----Options for Debugging-----");
-            Console.WriteLine($"Sqrt(({(firstList[(int)tempFirstPoint.xAxis]).ToString()} - {(secondList[(int)tempFirstPoint.xAxis]).ToString()})^2"
-                                        + $"({(firstList[(int)tempFirstPoint.yAxis]).ToString()} - {(secondList[(int)tempFirstPoint.yAxis]).ToString()})^2)");
+            Console.WriteLine("How many points in ur space: ");
 
-            Console.WriteLine($"First point: {tempFirstPoint.xAxis.ToString()}\nSecond point: {tempFirstPoint.yAxis.ToString()}");
+            long pointsInSpace = Convert.ToInt64(Console.ReadLine());
+
+            newFiller.Fill(ref space, ref pointsInSpace, -9999, 9999);
+
+
+            /// <summary>
+            /// var cause doesn't work with long (try to replace)
+            for(int i = 0; i<pointsInSpace; i++)
+                space[i].DisplayComponents();
+
+
         }
+
+
     }
+
 }
+

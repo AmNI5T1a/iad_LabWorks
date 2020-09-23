@@ -10,7 +10,7 @@ namespace IAD
         /// <summary>
         /// After realising MainMethod - split it
         /// </summary>      
-        private SpaceFiller _filler = new SpaceFiller();  
+        private SpaceFiller _filler = new SpaceFiller();
         public void Main()
         {
             Console.WriteLine("Input  number of  neighbors: ");
@@ -27,12 +27,12 @@ namespace IAD
             /// <summary>
             /// Filling space with random variables
             /// </summary>
-            _filler.Fill(ref space, ref pointsInSpace , -1000, 1000);
+            _filler.Fill(ref space, ref pointsInSpace, -1000, 1000);
 
             /// <summary>
             /// Filling list of Neighbors with random point from space
             /// </summary>
-            _filler.Fill(ref listOfNeighbors,ref numberOfNeighbor, ref space);
+            _filler.Fill(ref listOfNeighbors, ref numberOfNeighbor, ref space);
 
 
             ShowVector2Space(pointsInSpace, space);
@@ -98,15 +98,26 @@ namespace IAD
         public void Fill(ref List<Vector2> list, ref short butting, short from, short to)
         {
             for (short i = 0; i < butting; i++)
-                list.Add(new Vector2(rndGeneration.Next(from,to),rndGeneration.Next(from,to)));
+                list.Add(new Vector2(rndGeneration.Next(from, to), rndGeneration.Next(from, to)));
         }
         /// <summary>
         /// Method to fill a list from another existing list
         /// <summary>
-        public void Fill(ref List<Vector2> listToFill, ref short butting , ref List<Vector2> mainList)
+        public void Fill(ref List<Vector2> listToFill, ref short butting, ref List<Vector2> mainList)
         {
-            for(short i=0;i< butting;i++)
+            for (short i = 0; i < butting; i++)
                 listToFill.Add(mainList[i]);
+        }
+        public void Fill(ref List<FeatureSpace.Point> space, ref long pointsInSpace,int from,int to)
+        {
+            FeatureSpace.Point point = new FeatureSpace.Point();
+            for (long i = 0; i < pointsInSpace; i++)
+            {
+                point.PasteComponents(rndGeneration.Next(from,to),rndGeneration.Next(from,to));
+
+                space.Add(point);
+            }
+
         }
     }
 }
