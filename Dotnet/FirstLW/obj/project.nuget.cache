@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "o92pPi8+oW0Su7/ySMKvs2yWwdhonr88ardNaxLQjwDd34ae5s0gUDF4wyYHcCrN4yDxfHKhTbYqoq0A2da9Eg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ryabi\\Desktop\\iad_Labs\\iad_LabWorks-master\\FirstLw\\Scripts\\MainMenu.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ryabi\\.nuget\\packages\\microsoft.netcore.app\\2.1.0\\microsoft.netcore.app.2.1.0.nupkg.sha512",
+    "C:\\Users\\ryabi\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.1.0\\microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",
+    "C:\\Users\\ryabi\\.nuget\\packages\\microsoft.netcore.dotnethostpolicy\\2.1.0\\microsoft.netcore.dotnethostpolicy.2.1.0.nupkg.sha512",
+    "C:\\Users\\ryabi\\.nuget\\packages\\microsoft.netcore.dotnethostresolver\\2.1.0\\microsoft.netcore.dotnethostresolver.2.1.0.nupkg.sha512",
+    "C:\\Users\\ryabi\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
+    "C:\\Users\\ryabi\\.nuget\\packages\\microsoft.netcore.targets\\2.1.0\\microsoft.netcore.targets.2.1.0.nupkg.sha512",
+    "C:\\Users\\ryabi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

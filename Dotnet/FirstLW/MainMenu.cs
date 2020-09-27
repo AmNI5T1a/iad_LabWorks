@@ -18,7 +18,6 @@ namespace IAD
                 case (2):
                     InformativenessOfSpace informativeness = new InformativenessOfSpace();
                     informativeness.MainMethod();
-
                     break;
                 case (3):
                     Console.Clear();
