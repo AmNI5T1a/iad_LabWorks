@@ -23,7 +23,6 @@ namespace IAD
                     Console.Clear();
                     MethodOfNearestNeigbor kNN = new MethodOfNearestNeigbor();
                     kNN.Main();
-                    Console.WriteLine("Ready!");
                     Console.ReadKey();
                     break;
             }

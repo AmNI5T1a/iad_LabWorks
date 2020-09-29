@@ -65,7 +65,6 @@ namespace IAD
             Console.WriteLine("Your nearest neighbors: ");
             _displaySpace.ShowVector2Space(numberOfNeighbor, listOfNeighbors);
             Console.WriteLine($"Your point: {space[yourPoint]}");
-
         }
 
 
@@ -84,7 +83,7 @@ namespace IAD
         /// Formule : √((x1-x2)^2+(y1-y2)^2)
         /// Can be modified to change to Vector3,Vector4 and so on
         /// </summary>
-        virtual protected double EuclidDistance(Vector2 firstTemp, Vector2 secondTemp)
+        virtual public double EuclidDistance(Vector2 firstTemp, Vector2 secondTemp)
         {
             double result = Math.Sqrt(Math.Pow(firstTemp.X - secondTemp.X, 2) + Math.Pow(firstTemp.Y - secondTemp.Y, 2));
             return result;
