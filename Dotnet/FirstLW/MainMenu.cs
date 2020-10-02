@@ -12,17 +12,19 @@ namespace IAD
             switch (chooser)
             {
                 case (1):
-                    FeatureSpace space = new FeatureSpace();
-                    space.CreateSpace(-9999,9999);
+                    Console.Clear();
+                    FeatureSpace _featureSpace = new FeatureSpace();
+                    _featureSpace.MainMethod();
                     break;
                 case (2):
+                    Console.Clear();
                     InformativenessOfSpace informativeness = new InformativenessOfSpace();
                     informativeness.MainMethod();
                     break;
                 case (3):
                     Console.Clear();
                     MethodOfNearestNeigbor kNN = new MethodOfNearestNeigbor();
-                    kNN.Main();
+                    kNN.MainMethod();
                     Console.ReadKey();
                     break;
             }

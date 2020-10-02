@@ -13,7 +13,7 @@ namespace IAD
         /// </summary>      
         private SpaceFiller _filler = new SpaceFiller();
         private ShowSpace _displaySpace = new ShowSpace();
-        public void Main()
+        public void MainMethod()
         {
             Console.WriteLine("Input  number of  neighbors: ");
             short numberOfNeighbor = Convert.ToInt16(Console.ReadLine());
@@ -112,16 +112,15 @@ namespace IAD
         /// <summary>
         /// Method for filling space in first task 
         /// </summary>
-        public void Fill(ref List<FeatureSpace.Point> space, ref long pointsInSpace, int from, int to)
+        public void Fill(ref List<Point> space, ref long pointsInSpace, int from, int to)
         {
-            FeatureSpace.Point point = new FeatureSpace.Point();
-            for (long i = 0; i < pointsInSpace; i++)
+            Point point = new Point();
+            for (long i = 0; i <= pointsInSpace; i++)
             {
                 point.PasteComponents(rndGeneration.Next(from, to), rndGeneration.Next(from, to));
 
                 space.Add(point);
             }
-
         }
     }
     class ShowSpace
@@ -131,13 +130,13 @@ namespace IAD
             for (int other = 0; other < pointsInSpace; other++)
                 Console.WriteLine($"{other.ToString()}: {vector2s[other]}");
         }
-        public void ShowPointsSpace(ref List<FeatureSpace.Point> space,in long pointsInSpace)
+        public void ShowPointsSpace(ref List<Point> space, in long pointsInSpace)
         {
-            for (int i = 0; i < pointsInSpace; i++){
-                Console.Write($"Point number {i} is : ");
+            for (int i = 1; i < pointsInSpace; i++)
+            {
+                Console.Write($"{i} point is: ");
                 space[i].DisplayComponents();
             }
         }
-
     }
 }
