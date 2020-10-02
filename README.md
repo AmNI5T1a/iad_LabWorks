@@ -1,3 +1,12 @@
+ 
+ # Contributing
+  - :one:. Fork the repository! [How:interrobang:](https://www.earthdatascience.org/workshops/intro-version-control-git/about-forks/#:~:text=You%20can%20fork%20any%20repo,Source%3A%20GitHub%20Guides.)
+  - :two:. Create your feature branch
+  - :three:. Commit your changes
+  - :four:. Push to the branch
+  - :five:. Submit a pull request to this repository
+  
+    
 # Dotnet
 ## :black_square_button:First Laboratory work:
 - [X] First task: 
