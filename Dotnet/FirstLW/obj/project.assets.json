@@ -688,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AmNI5TIa\\.nuget\\packages\\": {},
+    "C:\\Users\\ryabi\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AmNI5TIa\\Documents\\GitHub\\iad_LabWorks\\Dotnet\\FirstLW\\MainMenu.csproj",
+      "projectUniqueName": "C:\\Users\\ryabi\\Documents\\GitHub\\iad_LabWorks\\Dotnet\\FirstLW\\MainMenu.csproj",
       "projectName": "MainMenu",
-      "projectPath": "C:\\Users\\AmNI5TIa\\Documents\\GitHub\\iad_LabWorks\\Dotnet\\FirstLW\\MainMenu.csproj",
-      "packagesPath": "C:\\Users\\AmNI5TIa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AmNI5TIa\\Documents\\GitHub\\iad_LabWorks\\Dotnet\\FirstLW\\obj\\",
+      "projectPath": "C:\\Users\\ryabi\\Documents\\GitHub\\iad_LabWorks\\Dotnet\\FirstLW\\MainMenu.csproj",
+      "packagesPath": "C:\\Users\\ryabi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ryabi\\Documents\\GitHub\\iad_LabWorks\\Dotnet\\FirstLW\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\AmNI5TIa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ryabi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -727,16 +727,23 @@
       "netcoreapp2.1": {
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -65,3 +65,15 @@ C:\Users\AmNI5TIa\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\obj\Debug\netcore
 C:\Users\AmNI5TIa\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\obj\Debug\netcoreapp2.1\MainMenu.AssemblyInfo.cs
 C:\Users\AmNI5TIa\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\obj\Debug\netcoreapp2.1\MainMenu.dll
 C:\Users\AmNI5TIa\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\obj\Debug\netcoreapp2.1\MainMenu.pdb
+C:\Users\ryabi\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\bin\Debug\netcoreapp2.1\MainMenu.deps.json
+C:\Users\ryabi\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\bin\Debug\netcoreapp2.1\MainMenu.runtimeconfig.json
+C:\Users\ryabi\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\bin\Debug\netcoreapp2.1\MainMenu.runtimeconfig.dev.json
+C:\Users\ryabi\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\bin\Debug\netcoreapp2.1\MainMenu.dll
+C:\Users\ryabi\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\bin\Debug\netcoreapp2.1\MainMenu.pdb
+C:\Users\ryabi\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\obj\Debug\netcoreapp2.1\MainMenu.csprojAssemblyReference.cache
+C:\Users\ryabi\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\obj\Debug\netcoreapp2.1\MainMenu.AssemblyInfoInputs.cache
+C:\Users\ryabi\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\obj\Debug\netcoreapp2.1\MainMenu.AssemblyInfo.cs
+C:\Users\ryabi\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\obj\Debug\netcoreapp2.1\MainMenu.csproj.CoreCompileInputs.cache
+C:\Users\ryabi\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\obj\Debug\netcoreapp2.1\MainMenu.dll
+C:\Users\ryabi\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\obj\Debug\netcoreapp2.1\MainMenu.pdb
+C:\Users\ryabi\Documents\GitHub\iad_LabWorks\Dotnet\FirstLW\obj\Debug\netcoreapp2.1\MainMenu.genruntimeconfig.cache

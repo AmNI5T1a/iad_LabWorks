@@ -63,12 +63,14 @@ namespace IAD
                 listOfClasses[i] = new List<Vector2>();
             }
 
-            //_intraDistance.Print();
 
             List<Sector> sectors = new List<Sector>();
 
             _sectorCreator.GenerateSectors(ref sectors, numberOfClasses);
 
+            /// <summary>
+            /// Output to console all created sectors
+            /// </summary>
             #region Show all Sectors(commented)
             // for (int i = 0; i < sectors.Count; i++)
             // {
@@ -85,7 +87,7 @@ namespace IAD
             for (int i = 0; i < numberOfClasses; i++)
             {
                 Sector tempSector = sectors[i];
-                _spaceFiller.FillSpaceTEST(ref listOfClasses[i], _rndGeneration.Next(1, 25), ref tempSector);
+                _spaceFiller.FillSpace(ref listOfClasses[i], _rndGeneration.Next(1, 25), ref tempSector);
                 sectors[i] = tempSector;
             }
 
@@ -95,7 +97,7 @@ namespace IAD
                 Console.WriteLine($"Iteration number {i + 1}");
                 _spaceDisplayer.Print(listOfClasses[i]);
             }
-            Console.WriteLine("___________________END OF SHOWING ALL POINTS IN ALL CLASSES___________________________");
+            Console.WriteLine("_______________END OF SHOWING ALL POINTS IN ALL CLASSES____________________");
 
 
             for (int i = 0; i < numberOfClasses; i++)
@@ -106,6 +108,12 @@ namespace IAD
             _intraDistance.Print();
 
             _betweenSetsDis.MainMethod(numberOfClasses, ref listOfClasses);
+
+            //Console.WriteLine($"Between sets distance is: {_betweenSetsDis.CalculateFinalDistance().ToString()}");
+            //Console.WriteLine($"Your Intramultiple Distance is : {_intraDistance.ReturnIntraDistance().ToString()}");
+            Console.WriteLine($"Your Informativeness of space is : {_betweenSetsDis.CalculateFinalDistance()/_intraDistance.ReturnIntraDistance()}");
+
+            
 
         }
         class SpaceDisplayer : IDisplayer
@@ -123,16 +131,20 @@ namespace IAD
             Random rndGeneration = new Random();
 
             /// <summary>
-            /// butting - number of points in class
+            /// butting - number of points in your class
             /// </summary>
-            public void FillSpace(ref List<Vector2> spaceToFill, int butting, short from, short to)
+
+            public void FillSpace(ref List<Vector2> spaceToFill, int butting, ref Sector sector)
             {
                 for (int i = 0; i < butting; i++)
                 {
-                    spaceToFill.Add(new Vector2(rndGeneration.Next(-1000, 1000), rndGeneration.Next(-1000, 1000)));
+                    spaceToFill.Add(new Vector2(rndGeneration.Next((int)sector.from.X, (int)sector.to.X), rndGeneration.Next((int)sector.from.Y, (int)sector.to.Y)));
                 }
             }
-            public void FillSpaceTEST(ref List<Vector2> spaceToFill, int butting, ref Sector sector)
+            /// <summary>
+            /// Same as FillSpace but with debug info
+            /// </summary>
+            public void FillSpaceDebug(ref List<Vector2> spaceToFill, int butting, ref Sector sector)
             {
                 Console.WriteLine("__________________MAIN INFO_______________");
                 sector.DisplayInfo();
@@ -234,6 +246,17 @@ namespace IAD
 
                 Console.WriteLine($"Your final Intramultiple Distance is: {foldedDistances / calculatedDistances.Count}");
             }
+            public double ReturnIntraDistance()
+            {
+                double foldedDistances = 0;
+
+                for (int i = 0; i < calculatedDistances.Count; i++)
+                {
+                    foldedDistances += calculatedDistances[i];
+                }
+
+                return foldedDistances/calculatedDistances.Count;
+            }
         }
         class BetweenSetsDistance
         {
@@ -268,14 +291,14 @@ namespace IAD
                     }
                 }
             }
-            private double CalculateFinalDistance()
+            public double CalculateFinalDistance()
             {
                 double flattenedDistances = 0;
                 for (int i = 0; i < allDistances.Count; i++)
                 {
-                    flattenedDistances+=allDistances[i];
+                    flattenedDistances += allDistances[i];
                 }
-                return (flattenedDistances/allDistances.Count);
+                return (flattenedDistances / allDistances.Count);
             }
         }
     }
