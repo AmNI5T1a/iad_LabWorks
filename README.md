@@ -1,5 +1,6 @@
  
  # Contributing
+  - **If you are interested in these labs or you just want to suggest your OWN solution, then:**
   - :one:. Fork the repository! [How:interrobang:](https://www.earthdatascience.org/workshops/intro-version-control-git/about-forks/#:~:text=You%20can%20fork%20any%20repo,Source%3A%20GitHub%20Guides.)
   - :two:. Create your feature branch
   - :three:. Commit your changes
