@@ -89,6 +89,7 @@ namespace IAD
             return result;
         }
     }
+
     class SpaceFiller
     {
         private Random rndGeneration = new Random();
@@ -96,46 +97,45 @@ namespace IAD
         /// <summary>
         /// Method to fill list with random variables
         /// </summary>
+
         public void Fill(ref List<Vector2> list, ref short butting, short from, short to)
         {
             for (short i = 0; i < butting; i++)
                 list.Add(new Vector2(rndGeneration.Next(from, to), rndGeneration.Next(from, to)));
         }
+
         /// <summary>
         /// Method to fill a list from another existing list
         /// <summary>
+
         public void Fill(ref List<Vector2> listToFill, ref short butting, ref List<Vector2> mainList)
         {
             for (short i = 0; i < butting; i++)
                 listToFill.Add(mainList[i]);
         }
-        /// <summary>
-        /// Method for filling space in first task 
-        /// </summary>
-        public void Fill(ref List<Point> space, ref long pointsInSpace, int from, int to)
-        {
-            Point point = new Point();
-            for (long i = 0; i <= pointsInSpace; i++)
-            {
-                point.PasteComponents(rndGeneration.Next(from, to), rndGeneration.Next(from, to));
-
-                space.Add(point);
-            }
-        }
     }
-    class ShowSpace
+    interface IVector2SpaceDisplayer
     {
-        public void ShowVector2Space(in short pointsInSpace, in List<Vector2> vector2s)
+        void ShowVector2Space(in short pointsInSpace, in List<Vector2> space);
+    }
+    interface IPointsSpaceDisplayer
+    {
+        void ShowPointsSpace(ref List<Point> space, in long pointsInSpace);
+    }
+    class ShowSpace : IVector2SpaceDisplayer, IPointsSpaceDisplayer
+    {
+        public void ShowVector2Space(in short pointsInSpace, in List<Vector2> space)
         {
-            for (int other = 0; other < pointsInSpace; other++)
-                Console.WriteLine($"{other.ToString()}: {vector2s[other]}");
+            for (short j = 0; j < pointsInSpace; j++)
+                Console.WriteLine($"{j}: {space[j]}");
         }
+
         public void ShowPointsSpace(ref List<Point> space, in long pointsInSpace)
         {
-            for (int i = 1; i < pointsInSpace; i++)
+            for (long j = 0; j < pointsInSpace; j++)
             {
-                Console.Write($"{i} point is: ");
-                space[i].DisplayComponents();
+                Console.Write($"{j + 1} is : ");
+                space[(int)j].DisplayComponents();
             }
         }
     }

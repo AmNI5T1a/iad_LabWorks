@@ -8,7 +8,7 @@ namespace IAD
         static void Main()
         {
             Console.WriteLine("Choose ur task: \n1.Working with featured space\n2.Informativeness of the feature space \n3.Method of nearest neighbors");
-            Int16 chooser = Convert.ToInt16(Console.ReadLine());
+            byte chooser = Convert.ToByte(Console.ReadLine());
             switch (chooser)
             {
                 case (1):

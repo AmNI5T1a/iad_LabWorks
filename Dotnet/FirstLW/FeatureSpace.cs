@@ -8,10 +8,10 @@ namespace IAD
         private int xAxis;
         private int yAxis;
 
-        public void PasteComponents(int x, int y)
+        public Point(int x, int y)
         {
-            xAxis = x;
-            yAxis = y;
+            this.xAxis = x;
+            this.yAxis = y;
         }
         public void DisplayComponents()
         {
@@ -20,46 +20,36 @@ namespace IAD
     }
     public class FeatureSpace
     {
-        private ShowSpace _displaySpace = new ShowSpace();
-        private PointsSpaceCreator _spaceCreator = new PointsSpaceCreator();
         public void MainMethod()
-        {
-            var space = _spaceCreator.CreateSpace(-1000,1000);
-            _displaySpace.ShowPointsSpace(ref space , space.Count);
-        }
-    }
-
-    /// <summary>
-    /// y
-    /// ^
-    /// | .                 .       .
-    /// |                   .
-    /// |       .
-    /// |
-    /// |               .
-    /// |       .
-    /// -----------------------------------------------------------> x 
-    /// A certain amount of points in space
-
-    /// </summary>
-    class PointsSpaceCreator
-    {
-        private SpaceFiller newFiller = new SpaceFiller();
-        private ShowSpace _displaySpace = new ShowSpace();
-        public List<Point> CreateSpace(in int from, in int to)
         {
             List<Point> space = new List<Point>();
 
-            Console.WriteLine("How many points in ur space: ");
-
+            Console.WriteLine("Enter number of points in your space");
             long pointsInSpace = Convert.ToInt64(Console.ReadLine());
 
-            newFiller.Fill(ref space, ref pointsInSpace, from, to);
+            Filler spaceFiller = new Filler();
+            spaceFiller.FillSpaceWithPoints(ref space, ref pointsInSpace, -1000,1000);
+            
 
-            _displaySpace.ShowPointsSpace(ref space, pointsInSpace);
-
-            return space;
+            ShowSpace _displaySpace = new ShowSpace();
+            _displaySpace.ShowPointsSpace(ref space, space.Count);
         }
     }
+    interface PointsSpaceFiller
+    {
+        void FillSpaceWithPoints(ref List<Point> space,ref long pointInSpace, int from, int to);
+    }
+
+    class Filler : PointsSpaceFiller
+    {
+        public void FillSpaceWithPoints(ref List<Point> space,ref long pointInSpace, int from, int to)
+        {
+            Random rndGeneration = new Random();
+
+            for (long j = 0; j < pointInSpace; j++)
+                space.Add(new Point(rndGeneration.Next(from, to), rndGeneration.Next(from, to)));
+        }
+    }
+
 }
 
