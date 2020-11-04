@@ -6,11 +6,6 @@ using System.Numerics;
 
 namespace IAD
 {
-    /// <summary>
-    /// Every block of code here is new. 
-    /// i'm not going to use blocks of code from previous tasks
-    /// </summary>
-
     struct Sector
     {
         public Vector2 from;
@@ -47,17 +42,6 @@ namespace IAD
 
             List<Vector2>[] listOfClasses = new List<Vector2>[numberOfClasses];
 
-
-            #region Show All Classes(commented)
-            /*
-            for (int i = 0; i < numberOfClasses; i++)
-            {
-                Console.WriteLine($"Class number: {i}");
-                _spaceDisplayer.DisplaySpace(ref listOfClasses[i]);
-            }
-            */
-            #endregion
-
             for (int i = 0; i < numberOfClasses; i++)
             {
                 listOfClasses[i] = new List<Vector2>();
@@ -67,16 +51,6 @@ namespace IAD
             List<Sector> sectors = new List<Sector>();
 
             _sectorCreator.GenerateSectors(ref sectors, numberOfClasses);
-
-            /// <summary>
-            /// Output to console all created sectors
-            /// </summary>
-            #region Show all Sectors(commented)
-            // for (int i = 0; i < sectors.Count; i++)
-            // {
-            //     sectors[i].DisplayInfo();
-            // }
-            #endregion
 
             foreach (Sector i in sectors)
             {
@@ -164,12 +138,6 @@ namespace IAD
         {
             public void GenerateSectors(ref List<Sector> sectors, short numberOfSectors)
             {
-                /// <summary>
-                /// Example of input 
-                /// fromX  fromY   toX  toY
-                ///   0      0     300  300
-                /// Now we have sector with ((0,0);(300,300)) coordinates
-                ///<summary>
                 for (int i = 1; i < numberOfSectors + 1; i++)
                 {
                     Console.WriteLine($"Creating {i} sector: ");

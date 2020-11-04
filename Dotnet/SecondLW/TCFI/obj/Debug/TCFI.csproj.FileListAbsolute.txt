@@ -1,0 +1,10 @@
+C:\Users\AmNI5TIa\source\repos\TCFI\TCFI\bin\Debug\TCFI.exe.config
+C:\Users\AmNI5TIa\source\repos\TCFI\TCFI\bin\Debug\TCFI.exe
+C:\Users\AmNI5TIa\source\repos\TCFI\TCFI\bin\Debug\TCFI.pdb
+C:\Users\AmNI5TIa\source\repos\TCFI\TCFI\obj\Debug\TCFI.csprojAssemblyReference.cache
+C:\Users\AmNI5TIa\source\repos\TCFI\TCFI\obj\Debug\TCFI.Properties.Resources.resources
+C:\Users\AmNI5TIa\source\repos\TCFI\TCFI\obj\Debug\TCFI.csproj.GenerateResource.cache
+C:\Users\AmNI5TIa\source\repos\TCFI\TCFI\obj\Debug\TCFI.csproj.CoreCompileInputs.cache
+C:\Users\AmNI5TIa\source\repos\TCFI\TCFI\obj\Debug\TCFI.exe
+C:\Users\AmNI5TIa\source\repos\TCFI\TCFI\obj\Debug\TCFI.pdb
+C:\Users\AmNI5TIa\source\repos\TCFI\TCFI\obj\Debug\TCFI.TCFI.resources

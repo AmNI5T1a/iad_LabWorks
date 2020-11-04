@@ -7,10 +7,7 @@ using System.Numerics;
 namespace IAD
 {
     public class MethodOfNearestNeigbor
-    {
-        /// <summary>
-        /// After realising MainMethod - split it
-        /// </summary>      
+    {    
         private SpaceFiller _filler = new SpaceFiller();
         private ShowSpace _displaySpace = new ShowSpace();
         public void MainMethod()
@@ -89,7 +86,6 @@ namespace IAD
             return result;
         }
     }
-
     class SpaceFiller
     {
         private Random rndGeneration = new Random();

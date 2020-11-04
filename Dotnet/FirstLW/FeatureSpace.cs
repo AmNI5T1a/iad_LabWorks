@@ -28,8 +28,8 @@ namespace IAD
             long pointsInSpace = Convert.ToInt64(Console.ReadLine());
 
             Filler spaceFiller = new Filler();
-            spaceFiller.FillSpaceWithPoints(ref space, ref pointsInSpace, -1000,1000);
-            
+            spaceFiller.FillSpaceWithPoints(ref space, ref pointsInSpace, -1000, 1000);
+
 
             ShowSpace _displaySpace = new ShowSpace();
             _displaySpace.ShowPointsSpace(ref space, space.Count);
@@ -37,12 +37,12 @@ namespace IAD
     }
     interface PointsSpaceFiller
     {
-        void FillSpaceWithPoints(ref List<Point> space,ref long pointInSpace, int from, int to);
+        void FillSpaceWithPoints(ref List<Point> space, ref long pointInSpace, int from, int to);
     }
 
     class Filler : PointsSpaceFiller
     {
-        public void FillSpaceWithPoints(ref List<Point> space,ref long pointInSpace, int from, int to)
+        public void FillSpaceWithPoints(ref List<Point> space, ref long pointInSpace, int from, int to)
         {
             Random rndGeneration = new Random();
 
