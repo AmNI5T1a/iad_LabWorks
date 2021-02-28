@@ -48,12 +48,16 @@
     > -  Input number of neighbors you want to find. 
     > -  Input from keyboard number of points in your `space`.
     > -  Choose any point from the proposed.
-## :grey_exclamation:Second Laboratory work:
-- [ ] First task:
-- [ ] Second task:
-- [ ] Third task:
-_____________________________________________________________________________________________________________________________________
-# Python             
+## :black_square_button:Second Laboratory work:
+- [X] Main task: 
+    > **Description:** 
+    >
+    > Select a multispectral image from open sources. The number of image channels must be at least 3.
+    > 
+    > Set manually the classes of areas (objects) in the image (at least 3).
+    > 
+    > Classify the image points using the Euclidean-Mahalanobis metric.
+           
                
                
                
